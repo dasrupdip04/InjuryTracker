@@ -135,15 +135,33 @@ const InjuryTracker: React.FC = () => {
             viewBox="0 0 150 420"
             className="absolute top-0 left-0 w-[150px] h-[420px] z-10"
           >
-            <circle cx="75" cy="30" r="30" fill="red" onClick={() => handleBodyPartClick("Head")} />
-            <rect x="60" y="57" width="28" height="18" fill="blue" onClick={() => handleBodyPartClick("Neck")} />
-            <rect x="40" y="75" width="70" height="70" fill="green" onClick={() => handleBodyPartClick("Chest")} />
-            <rect x="10" y="100" width="25" height="160" fill="blue" transform="rotate(10, 130, 150)" onClick={() => handleBodyPartClick("Right Hand")} />
-            <rect x="115" y="80" width="25" height="160" fill="blue" transform="rotate(-10, 130, 150)" onClick={() => handleBodyPartClick("Left Hand")} />
-            <rect x="40" y="145" width="70" height="60" fill="yellow" onClick={() => handleBodyPartClick("Stomach")} />
-            <rect x="35" y="205" width="80" height="35" fill="grey" onClick={() => handleBodyPartClick("Abdomen")} />
-            <rect x="40" y="235" width="35" height="160" fill="blue" transform="rotate(2, 130, 150)" onClick={() => handleBodyPartClick("Right Leg")} />
-            <rect x="73" y="235" width="35" height="160" fill="blue" transform="rotate(359, 130, 150)" onClick={() => handleBodyPartClick("Left Leg")} />
+            <rect x="0" y="0" width="150" height="420" fill="transparent" onClick={() => setSelectedPart(null)} />
+            <circle cx="75" cy="30" r="30" fill="transparent" onClick={() => handleBodyPartClick("Head")} />
+            <rect x="60" y="57" width="28" height="18" fill="transparent" onClick={() => handleBodyPartClick("Neck")} />
+            <rect x="40" y="75" width="70" height="70" fill="transparent" onClick={() => handleBodyPartClick("Chest")} />
+            <rect x="13" y="95" width="22" height="75" fill="transparent" transform="rotate(10, 130, 150)" onClick={() => handleBodyPartClick("Right Arm")} />
+            <rect x="15" y="170" width="19" height="48" fill="transparent" transform="rotate(10, 130, 150)" onClick={() => handleBodyPartClick("Right Forearm")} /> 
+            <rect x="117" y="78" width="22" height="75" fill="transparent" transform="rotate(350, 130, 150)" onClick={() => handleBodyPartClick("Left Arm")} />
+            <rect x="116" y="153" width="19" height="48" fill="transparent" transform="rotate(350, 130, 150)" onClick={() => handleBodyPartClick("Left Forearm")} /> 
+            <rect x="19" y="218" width="15" height="40" fill="transparent" transform="rotate(10, 130, 150)" onClick={() => handleBodyPartClick("Right hand")} /> 
+            <rect x="141" y="199" width="15" height="40" fill="transparent" transform="rotate(10, 130, 150)" onClick={() => handleBodyPartClick("Left hand")} /> 
+            
+            <rect x="40" y="145" width="70" height="60" fill="transparent" onClick={() => handleBodyPartClick("Stomach")} />
+            <rect x="35" y="205" width="80" height="35" fill="transparent" onClick={() => handleBodyPartClick("Abdomen")} />
+            
+            <polygon points="35,240 77,240 68,295 45,295" fill="transparent" transform="rotate(2, 130, 150)" onClick={() => handleBodyPartClick("Right Thigh")} />
+<polygon points="73,235 116,235 105,295 83,295" fill="transparent" transform="rotate(359, 130, 150)" onClick={() => handleBodyPartClick("Left Thigh")} />
+{/* <rect x="45" y="295" width="23" height="90" fill="blue" transform="rotate(2, 130, 150)" onClick={() => handleBodyPartClick("Right Leg")} />
+<rect x="45" y="395" width="25" height="10" fill="green" transform="rotate(2, 130, 150)" onClick={() => handleBodyPartClick("Right Toe")} /> */}
+<polygon points="45,295 70,295 68,380 50,380" fill="transparent" transform="rotate(2, 130, 150)" onClick={() => handleBodyPartClick("Right Leg")} />
+<polygon points="50,380 70,380 72,413 43,413" fill="transparent" transform="rotate(2, 130, 150)" onClick={() => handleBodyPartClick("Right Toe")} />
+
+{/* <rect x="73" y="295" width="35" height="60" fill="transparent" transform="rotate(359, 130, 150)" onClick={() => handleBodyPartClick("Left Leg")} />
+<rect x="73" y="355" width="35" height="40" fill="transparent" transform="rotate(359, 130, 150)" onClick={() => handleBodyPartClick("Left Toe")} /> */}
+<polygon points="84,295 112,295 100,380 86,380" fill="transparent" transform="rotate(359, 130, 150)" onClick={() => handleBodyPartClick("Left Leg")} />
+<polygon points="85,380 100,380 108,413 82,407" fill="transparent" transform="rotate(359, 130, 150)" onClick={() => handleBodyPartClick("Left Toe")} />
+
+
           </svg>
         </div>
       </div>
