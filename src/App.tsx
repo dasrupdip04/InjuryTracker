@@ -128,7 +128,7 @@ const InjuryTracker: React.FC = () => {
         <div className="relative h-[420px] w-[150px]">
           <img
             className="relative z-0"
-            src="../public/Screenshot 2025-04-05 at 1.48.29 AM.png"
+            src="/body-diagram.png"
             alt="Body Diagram"
           />
           <svg
